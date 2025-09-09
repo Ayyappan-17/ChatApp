@@ -16,9 +16,10 @@ const HomePage = () => {
             : ''
         }`}
       >
-        <SideBar />
-        <ChatContainer />
-        <RightsideBar />
+        {/* Pass state as props */}
+        <SideBar selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+        <ChatContainer selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+        <RightsideBar selectedUser={selectedUser} />
       </div>
     </div>
   )
